@@ -1,0 +1,44 @@
+.avatarscontainer {
+  display: inline-flex;
+  background-color: white;
+  padding: 100px;
+}
+.avatar-list {
+  display: inline;
+  padding top: 100px;
+  padding-left: 100px;
+  padding-right:100px;
+}
+li {
+  display: inline-flex;
+  padding: 10px 10px;
+  position: relative;
+}
+
+.circle {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: #dbdbdb;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  margin-top: 0;
+}
+.circle-online {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: #4cfe88;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  margin-top: 0;
+}
+img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
