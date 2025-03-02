@@ -1,0 +1,167 @@
+/* 기본 설정 및 CSS 변수 */
+:root {
+  --text-color: #121212;
+  --primary-color: #03cf5d;
+  --focus-color: #24388d;
+  --border-color: #dadada;
+  --focus-bg-color: #e9f0fd;
+  --font-size-base: 1rem; /* 16px */
+  --font-size-small: 0.875rem; /* 14px */
+  --font-size-medium: 1rem; /* 16px */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: var(--font-size-base);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1.25rem;
+}
+
+/ .logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.logo svg {
+  width: 230px;
+  height: auto;
+}
+
+.input-wrapper {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.input-email,
+.input-pwd {
+  margin-bottom: 0.5rem;
+}
+
+.input-email input,
+.input-pwd input {
+  width: 100%;
+  height: 2.8125rem;
+  padding: 0 0.75rem;
+  font-size: var(--font-size-small);
+  border: 1px solid var(--border-color);
+  border-radius: 0.125rem;
+  background-color: #fff;
+}
+
+.input-email input:focus,
+.input-pwd input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: var(--focus-bg-color);
+}
+
+input:focus-visible {
+  outline: 2px solid var(--focus-color);
+}
+
+.login-button {
+  width: 100%;
+  margin-top: 1.25rem; /* 20px */
+}
+
+.login-button button {
+  width: 100%;
+  height: 2.8125rem; /* 45px */
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: var(--font-size-medium);
+  border: none;
+  border-radius: 0.125rem;
+  cursor: pointer;
+}
+
+.login-button button:focus-visible {
+  outline: 2px solid var(--focus-color);
+}
+
+.login-check {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.625rem; /* 10px */
+}
+
+.check-login {
+  display: flex;
+  align-items: center;
+}
+
+/* 체크박스 스타일링 */
+.check-login input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.check-login label {
+  position: relative;
+  padding-left: 1.8125rem; /* 29px (24px + 5px) */
+  cursor: pointer;
+}
+
+.check-login label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5rem; /* 24px */
+  height: 1.5rem; /* 24px */
+  background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="22" height="22" rx="11" stroke="%23dadada" stroke-width="2"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 0.3125rem; /* 5px */
+}
+.check-login label {
+  padding-left: 1.8125rem;
+  position: relative;
+}
+
+.check-login label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.check-login input[type="checkbox"]:checked + label::before {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.check-login input[type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 0.75rem;
+  width: 0.5rem;
+  height: 0.25rem;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.check-login input[type="checkbox"]:focus-visible + label::before {
+  outline: 2px solid var(--focus-color);
+}
