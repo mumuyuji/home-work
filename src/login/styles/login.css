@@ -27,7 +27,7 @@ body {
   padding: 1.25rem;
 }
 
-/ .logo {
+.logo {
   display: flex;
   justify-content: center;
   margin-bottom: 1.5rem;
