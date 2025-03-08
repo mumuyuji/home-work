@@ -1,0 +1,71 @@
+@import "./reset.css";
+@import "./theme.css";
+@import "./base.css";
+
+/* 카드 컨텐츠 기본 스타일 */
+.card-content {
+  text-align: center;
+  display: grid;
+  gap: var(--small-spacing);
+  margin-bottom: var(--small-spacing);
+}
+
+/* 카드 텍스트 컴포넌트 스타일 */
+.card-title {
+  font-size: var(--large-text);
+  margin-top: var(--large-spacing);
+}
+
+.card-text {
+  font-size: var(--base-text);
+}
+
+.card-subtext {
+  font-size: var(--small-text);
+  color: var(--gray);
+}
+
+/* 버튼 컨테이너 */
+.card-buttons {
+  display: inline-flex;
+  column-gap: var(--base-spacing);
+}
+
+/* 버튼 공통 스타일 */
+.card-buttons .btn-primy,
+.card-buttons .btn-secondary {
+  font-size: var(--xx-small-text);
+  border-radius: 50px;
+  padding: var(--x-small-spacing) var(--small-spacing);
+}
+
+/* 테마별 버튼 스타일 */
+/* 블루 테마 (기본) */
+.card:not(.black) {
+  --btn-primary-bg: var(--blue-300);
+  --btn-primary-hover-bg: var(--blue-200);
+  --btn-text: var(--white);
+}
+
+/* 버튼 스타일 적용 */
+.btn-primy {
+  background: var(--black);
+  color: var(--btn-text);
+  border: 1px solid var(--btn-primary-bg);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--btn-primary-bg);
+  border: 1px solid var(--btn-primary-bg);
+}
+
+.btn-secondary:hover {
+  color: var(--btn-text);
+  background: var(--btn-primary-bg);
+}
+
+/* 블루 테마 텍스트 색상 */
+.card:not(.black) .card-content {
+  color: var(--white);
+}
